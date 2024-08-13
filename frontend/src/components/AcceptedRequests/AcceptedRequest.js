@@ -35,13 +35,13 @@ const AcceptedRequest = ({ request, onUpdate }) => {
         //   "mailto:nischal@gmail.com?subject=Subject&body=Body%20goes%20here"
         // )}
       >
-        {/* <div>
+        <div>
           <img
             src={`https://localhost:3001/uploads/${request.proposalBookAuthor.image}`}
             alt=""
             className="max-w-[70px] max-h-[70px] min-w-[45px] min-h-[45px] rounded-full object-fill vsm:w-[55px] vsm:h-[55px]"
           />
-        </div> */}
+        </div>
 
         <div className="flex flex-col">
           <div>
