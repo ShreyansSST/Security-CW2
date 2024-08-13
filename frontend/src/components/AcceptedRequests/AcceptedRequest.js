@@ -11,7 +11,7 @@ const AcceptedRequest = ({ request, onUpdate }) => {
   const handleRemove = () => {
     axios
       .delete(
-        `http://localhost:3001/exchange/exchange-request/${request._id}/decline`,
+        `https://localhost:3001/exchange/exchange-request/${request._id}/decline`,
         {},
         {
           headers: {
@@ -37,7 +37,7 @@ const AcceptedRequest = ({ request, onUpdate }) => {
       >
         <div>
           <img
-            src={`http://localhost:3001/uploads/${request.proposalBookAuthor.image}`}
+            src={`https://localhost:3001/uploads/${request.proposalBookAuthor.image}`}
             alt=""
             className="max-w-[70px] max-h-[70px] min-w-[45px] min-h-[45px] rounded-full object-fill vsm:w-[55px] vsm:h-[55px]"
           />

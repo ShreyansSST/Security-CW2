@@ -17,7 +17,7 @@ const ExchangeRequest = ({ exchangeRequest, onUpdate }) => {
 
     axios
       .put(
-        `http://localhost:3001/exchange/exchange-request/${exchangeRequest._id}/accept`,
+        `https://localhost:3001/exchange/exchange-request/${exchangeRequest._id}/accept`,
         {},
         {
           headers: {
@@ -44,7 +44,7 @@ const ExchangeRequest = ({ exchangeRequest, onUpdate }) => {
 
     axios
       .delete(
-        `http://localhost:3001/exchange/exchange-request/${exchangeRequest._id}/decline`,
+        `https://localhost:3001/exchange/exchange-request/${exchangeRequest._id}/decline`,
         {},
         {
           headers: {
@@ -76,7 +76,7 @@ const ExchangeRequest = ({ exchangeRequest, onUpdate }) => {
       <div className="flex items-center gap-2">
         <div className="w-[90px]">
           <img
-            src={`http://localhost:3001/uploads/${exchangeRequest.proposalBookCover}`}
+            src={`https://localhost:3001/uploads/${exchangeRequest.proposalBookCover}`}
             alt=""
             className="w-full h-full rounded-lg"
           />

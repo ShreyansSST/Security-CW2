@@ -39,7 +39,7 @@ const IndividualYourBook = ({ book }) => {
 
   const handleConfirmDelete = () => {
     axios
-      .delete(`http://localhost:3001/books/${book._id}`, {
+      .delete(`https://localhost:3001/books/${book._id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -62,7 +62,7 @@ const IndividualYourBook = ({ book }) => {
         onMouseLeave={handleMouseLeave}
       >
         <img
-          src={`http://localhost:3001/uploads/${book.bookCover}`}
+          src={`https://localhost:3001/uploads/${book.bookCover}`}
           alt=""
           className="rounded-lg w-[120px] h-[170px] object-fill"
         />

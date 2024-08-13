@@ -9,7 +9,7 @@ const ExchangeRequestsBody = () => {
 
   const handleUpdate = () => {
     axios
-      .get("http://localhost:3001/exchange/exchange-requests", {
+      .get("https://localhost:3001/exchange/exchange-requests", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

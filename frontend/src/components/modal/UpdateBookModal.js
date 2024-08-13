@@ -20,7 +20,7 @@ const UpdateBookModal = ({ book, closeModal }) => {
   useEffect(() => {
     if (book._id) {
       axios
-        .get(`http://localhost:3001/books/${book._id}`, {
+        .get(`https://localhost:3001/books/${book._id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -69,7 +69,7 @@ const UpdateBookModal = ({ book, closeModal }) => {
 
     axios
       .put(
-        `http://localhost:3001/books/${book._id}`,
+        `https://localhost:3001/books/${book._id}`,
         {
           title,
           author,

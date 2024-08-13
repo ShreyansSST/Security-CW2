@@ -36,7 +36,7 @@ const EditProfile = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3001/users/edit-profile`,
+        `https://localhost:3001/users/edit-profile`,
         {
           fullname,
           username,

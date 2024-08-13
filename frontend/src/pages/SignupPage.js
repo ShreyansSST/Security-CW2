@@ -47,7 +47,7 @@ const SignupPage = () => {
     setPasswordStrength(passwordScore.score);
 
     axios
-      .post("http://localhost:3001/users/register", {
+      .post("https://localhost:3001/users/register", {
         fullname,
         username,
         email,

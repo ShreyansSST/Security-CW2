@@ -20,7 +20,7 @@ const SearchBody = ({ userInfo, fetchUserInfo, handleBookClick }) => {
     }
 
     axios
-      .get(`http://localhost:3001/books/search?query=${searchQuery}`, {
+      .get(`https://localhost:3001/books/search?query=${searchQuery}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

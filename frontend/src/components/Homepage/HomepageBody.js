@@ -13,7 +13,7 @@ const HomepageBody = ({ handleBookClick, userInfo, fetchUserInfo }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/books", {})
+      .get("https://localhost:3001/books", {})
       .then((response) => setBooks(response.data.data))
       .catch((error) => console.log(error));
   }, []);

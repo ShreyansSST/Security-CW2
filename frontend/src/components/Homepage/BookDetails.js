@@ -30,7 +30,7 @@ const BookDetails = ({ userInfo, fetchUserInfo, book, openModal }) => {
       <div className="min-w-fit flex items-center justify-center gap-4 md:flex-col md:items-start md:justify-start">
         <div className="max-w-[150px] md:max-w-[180px]">
           <img
-            src={`http://localhost:3001/uploads/${book.bookCover}`}
+            src={`https://localhost:3001/uploads/${book.bookCover}`}
             alt=""
             className="rounded-lg h-[250px] object-fill"
           />
@@ -41,7 +41,7 @@ const BookDetails = ({ userInfo, fetchUserInfo, book, openModal }) => {
             <img
               src={
                 userInfo?.image
-                  ? `http://localhost:3001/uploads/${userInfo?.image}`
+                  ? `https://localhost:3001/uploads/${userInfo?.image}`
                   : "https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png"
               }
               alt=""
@@ -76,7 +76,7 @@ const BookDetails = ({ userInfo, fetchUserInfo, book, openModal }) => {
                 e.stopPropagation();
                 try {
                   const token = localStorage.getItem("token");
-                  await axios.delete(`http://localhost:3001/books/${book._id}`, {
+                  await axios.delete(`https://localhost:3001/books/${book._id}`, {
                     headers: {
                       Authorization: `Bearer ${token}`,
                     },

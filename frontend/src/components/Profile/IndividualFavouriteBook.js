@@ -16,7 +16,7 @@ const IndividualFavouriteBook = ({ bookId, userInfo, fetchUserInfo }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/books/${bookId}`, {
+      .get(`https://localhost:3001/books/${bookId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -41,7 +41,7 @@ const IndividualFavouriteBook = ({ bookId, userInfo, fetchUserInfo }) => {
 
       if (isBookmarked) {
         // Remove bookmark
-        await axios.delete(`http://localhost:3001/books/bookmark/${bookId}`, {
+        await axios.delete(`https://localhost:3001/books/bookmark/${bookId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -66,7 +66,7 @@ const IndividualFavouriteBook = ({ bookId, userInfo, fetchUserInfo }) => {
       } else {
         // Add bookmark
         await axios.post(
-          `http://localhost:3001/books/bookmark/${bookId}`,
+          `https://localhost:3001/books/bookmark/${bookId}`,
           null,
           {
             headers: {
@@ -111,7 +111,7 @@ const IndividualFavouriteBook = ({ bookId, userInfo, fetchUserInfo }) => {
       <img
         src={
           book?.data && book?.data[0] && book?.data[0].bookCover
-            ? `http://localhost:3001/uploads/${book?.data[0].bookCover}`
+            ? `https://localhost:3001/uploads/${book?.data[0].bookCover}`
             : "https://cdn.vectorstock.com/i/preview-1x/82/99/no-image-available-like-missing-picture-vector-43938299.jpg"
         }
         alt=""
@@ -137,7 +137,7 @@ const IndividualFavouriteBook = ({ bookId, userInfo, fetchUserInfo }) => {
             <img
               src={
                 userInfo?.image
-                  ? `http://localhost:3001/uploads/${userInfo?.image}`
+                  ? `https://localhost:3001/uploads/${userInfo?.image}`
                   : "https://st3.depositphotos.com/9998432/13335/v/600/depositphotos_133352156-stock-illustration-default-placeholder-profile-icon.jpg"
               }
               alt=""

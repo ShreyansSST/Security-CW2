@@ -15,7 +15,7 @@ export const TotalBooksProvider = ({ children }) => {
   useEffect(() => {
     const fetchTotalBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/books", {
+        const response = await axios.get("https://localhost:3001/books", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

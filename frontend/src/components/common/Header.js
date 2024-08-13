@@ -100,7 +100,7 @@ const Header = (props) => {
             onClick={() => props.handleTabClick("profile")}
           >
             <img
-              src={`http://localhost:3001/uploads/${user?.data[0].image}`}
+              src={`https://localhost:3001/uploads/${user?.data[0].image}`}
               alt=""
               className="w-10 h-10 rounded-full object-fill"
             />

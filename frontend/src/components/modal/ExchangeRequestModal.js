@@ -34,7 +34,7 @@ const ExchangeRequestModal = ({ closeModal, book }) => {
 
     axios
       .post(
-        `http://localhost:3001/exchange/${requestedBookId}/exchange-request`,
+        `https://localhost:3001/exchange/${requestedBookId}/exchange-request`,
         { proposalBook: proposedBookId, message: description },
         {
           headers: {
@@ -58,7 +58,7 @@ const ExchangeRequestModal = ({ closeModal, book }) => {
   useEffect(() => {
     const fetchUserBooks = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/books", {
+        const response = await axios.get("https://localhost:3001/books", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

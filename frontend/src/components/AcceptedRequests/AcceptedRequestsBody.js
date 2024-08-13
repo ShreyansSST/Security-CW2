@@ -10,7 +10,7 @@ const AcceptedRequestsBody = () => {
   const fetchAcceptedRequests = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3001/exchange/exchange-requests/accepted",
+        "https://localhost:3001/exchange/exchange-requests/accepted",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

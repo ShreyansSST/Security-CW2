@@ -56,7 +56,7 @@ const AddBookModal = ({ closeModal }) => {
       formData.append("profilePicture", bookCover);
 
       const response = await axios.post(
-        "http://localhost:3001/books/uploadBookCover",
+        "https://localhost:3001/books/uploadBookCover",
         formData,
         {
           headers: {
@@ -72,7 +72,7 @@ const AddBookModal = ({ closeModal }) => {
 
       // Add the book with the uploaded book cover
       await axios.post(
-        "http://localhost:3001/books",
+        "https://localhost:3001/books",
         {
           title,
           author,

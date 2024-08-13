@@ -33,7 +33,7 @@ const UserInfo = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/users/uploadImage",
+        "https://localhost:3001/users/uploadImage",
         formData,
         {
           headers: {
@@ -74,7 +74,7 @@ const UserInfo = () => {
         <img
           src={
             user?.data[0].image
-              ? `http://localhost:3001/uploads/${user?.data[0].image}`
+              ? `https://localhost:3001/uploads/${user?.data[0].image}`
               : "https://st3.depositphotos.com/9998432/13335/v/600/depositphotos_133352156-stock-illustration-default-placeholder-profile-icon.jpg"
           }
           alt=""

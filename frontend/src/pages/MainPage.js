@@ -47,7 +47,7 @@ const MainPage = () => {
   const fetchUserInfo = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/users/${userId}`,
+        `https://localhost:3001/users/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

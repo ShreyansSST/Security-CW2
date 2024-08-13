@@ -33,7 +33,7 @@ const ForgotPasswordPage = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:3001/users/password-recovery/request-password-reset",
+        "https://localhost:3001/users/password-recovery/request-password-reset",
         {
           method: "POST",
           headers: {
@@ -66,7 +66,7 @@ const ForgotPasswordPage = () => {
       setLoading(true);
 
       const response = await fetch(
-        `http://localhost:3001/users/password-recovery/reset-password/${token}`,
+        `https://localhost:3001/users/password-recovery/reset-password/${token}`,
         {
           method: "POST",
           headers: {

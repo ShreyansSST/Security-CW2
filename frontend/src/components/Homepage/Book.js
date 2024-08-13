@@ -31,7 +31,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
     const fetchExchangeRequests = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:3001/exchange/`, {
+        const response = await axios.get(`https://localhost:3001/exchange/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -61,7 +61,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
 
       if (isBookmarked) {
         // Remove bookmark
-        await axios.delete(`http://localhost:3001/books/bookmark/${book._id}`, {
+        await axios.delete(`https://localhost:3001/books/bookmark/${book._id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -86,7 +86,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
       } else {
         // Add bookmark
         await axios.post(
-          `http://localhost:3001/books/bookmark/${book._id}`,
+          `https://localhost:3001/books/bookmark/${book._id}`,
           null,
           {
             headers: {
@@ -135,7 +135,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
       <div
         className="bg-no-repeat bg-cover bg-center rounded-t-xl w-full h-[50%]"
         style={{
-          backgroundImage: `url(${`http://localhost:3001/uploads/${book.bookCover}`})`,
+          backgroundImage: `url(${`https://localhost:3001/uploads/${book.bookCover}`})`,
         }}
       >
         <div className="absolute w-full h-[50%] bg-[#00000098] rounded-t-xl"></div>
@@ -145,7 +145,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
             {/* <img
               src={
                 userInfo?.image
-                  ? `http://localhost:3001/uploads/${userInfo?.image}`
+                  ? `https://localhost:3001/uploads/${userInfo?.image}`
                   : "https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png"
               }
               alt=""
@@ -169,7 +169,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
                 e.stopPropagation();
                 try {
                   const token = localStorage.getItem("token");
-                  await axios.delete(`http://localhost:3001/books/${book._id}`, {
+                  await axios.delete(`https://localhost:3001/books/${book._id}`, {
                     headers: {
                       Authorization: `Bearer ${token}`,
                     },
@@ -224,7 +224,7 @@ const Book = ({ book, handleBookClick, fetchUserInfo, userInfo }) => {
 
       <div className="absolute top-1/2 left-3 -translate-y-1/2">
         <img
-          src={`http://localhost:3001/uploads/${book.bookCover}`}
+          src={`https://localhost:3001/uploads/${book.bookCover}`}
           alt=""
           className="w-[80px] h-[120px] rounded-lg object-fill"
         />
