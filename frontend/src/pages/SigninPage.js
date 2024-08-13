@@ -46,94 +46,94 @@ const SigninPage = () => {
   };
 
   return (
-    // <div className="bg-container bg-[url('./assets/images/light-bg.jpg')] dark:bg-[url('./assets/images/dark-bg.jpg')] bg-contain bg-no-repeat min-h-[100vh] flex bg-light-bg dark:bg-dark-bg">
-    //   <div className="w-full flex flex-col items-center sm:flex-row-reverse">
-    //     <RingAndCardsDesign />
+    <div className="bg-container bg-[url('./assets/images/light-bg.jpg')] dark:bg-[url('./assets/images/dark-bg.jpg')] bg-contain bg-no-repeat min-h-[100vh] flex bg-light-bg dark:bg-dark-bg">
+      <div className="w-full flex flex-col items-center sm:flex-row-reverse">
+        <RingAndCardsDesign />
 
-    //     <AuthCard>
-    //       <Link to="/">
-    //         <button className="border dark:border-white p-1 rounded-[3px] sm:hidden">
-    //           <FaAngleLeft className="text-xl text-black dark:text-white" />
-    //         </button>
-    //       </Link>
+        <AuthCard>
+          <Link to="/">
+            <button className="border dark:border-white p-1 rounded-[3px] sm:hidden">
+              <FaAngleLeft className="text-xl text-black dark:text-white" />
+            </button>
+          </Link>
 
-    //       <div className="w-full flex flex-col gap-8">
-    //         <div>
-    //           <h1 className="dark:text-white">Sign In</h1>
+          <div className="w-full flex flex-col gap-8">
+            <div>
+              <h1 className="dark:text-white">Sign In</h1>
 
-    //           <p className="text-dark-slate">
-    //             Enter your account details
-    //           </p>
-    //         </div>
+              <p className="text-dark-slate">
+                Enter your account details
+              </p>
+            </div>
 
-    //         <form className="flex flex-col gap-4">
-    //           {error && <span className="text-pale-red">{error}</span>}
+            <form className="flex flex-col gap-4">
+              {error && <span className="text-pale-red">{error}</span>}
 
-    //           <TextFieldWithLabel
-    //             label="Username"
-    //             type="username"
-    //             placeholder="Enter your username"
-    //             icon={HiMail}
-    //             onChange={handleUsernameChange}
-    //           />
+              <TextFieldWithLabel
+                label="Username"
+                type="username"
+                placeholder="Enter your username"
+                icon={HiMail}
+                onChange={handleUsernameChange}
+              />
 
-    //           <PasswordFieldWithLabel
-    //             label="Password"
-    //             placeholder="Enter your password"
-    //             onChange={handlePasswordChange}
-    //           />
+              <PasswordFieldWithLabel
+                label="Password"
+                placeholder="Enter your password"
+                onChange={handlePasswordChange}
+              />
 
-    //           <div className="flex items-center justify-between gap-4 mb-2">
-    //             <div className="flex items-center gap-2">
-    //               <input type="checkbox" name="remember-me" id="remember-me" />
-    //               <label
-    //                 htmlFor="remember-me"
-    //                 className="font-medium dark:text-white"
-    //               >
-    //                 Remember me
-    //               </label>
-    //             </div>
+              <div className="flex items-center justify-between gap-4 mb-2">
+                <div className="flex items-center gap-2">
+                  <input type="checkbox" name="remember-me" id="remember-me" />
+                  <label
+                    htmlFor="remember-me"
+                    className="font-medium dark:text-white"
+                  >
+                    Remember me
+                  </label>
+                </div>
 
-    //             <Link
-    //               to="/forgotPassword"
-    //               className="font-medium dark:text-white"
-    //             >
-    //               Forgot Password?
-    //             </Link>
-    //           </div>
+                <Link
+                  to="/forgotPassword"
+                  className="font-medium dark:text-white"
+                >
+                  Forgot Password?
+                </Link>
+              </div>
 
-    //           <PrimaryButton
-    //             btnLabel="Sign In"
-    //             onClick={handleSignin}
-    //             isLoading={isLoading}
-    //           />
+              <PrimaryButton
+                btnLabel="Sign In"
+                onClick={handleSignin}
+                isLoading={isLoading}
+              />
 
-    //           <div className="flex items-center gap-4 px-[10%] py-2">
-    //             <hr className="flex-1 border dark:border-white" />
-    //             <p className="font-semibold dark:text-white">or</p>
-    //             <hr className="flex-1 border dark:border-white" />
-    //           </div>
+              <div className="flex items-center gap-4 px-[10%] py-2">
+                <hr className="flex-1 border dark:border-white" />
+                <p className="font-semibold dark:text-white">or</p>
+                <hr className="flex-1 border dark:border-white" />
+              </div>
 
-    //           <Link to="/">
-    //             <button className="w-full flex items-center justify-center gap-2 bg-none border border-black dark:border-white rounded-[3px] py-3 px-5 sm:px-8">
-    //               <FaUser className="text-xl text-black dark:text-white" />
-    //               <p className="font-semibold dark:text-white">
-    //                 Continue as Guest
-    //               </p>
-    //             </button>
-    //           </Link>
-    //         </form>
+              <Link to="/">
+                <button className="w-full flex items-center justify-center gap-2 bg-none border border-black dark:border-white rounded-[3px] py-3 px-5 sm:px-8">
+                  <FaUser className="text-xl text-black dark:text-white" />
+                  <p className="font-semibold dark:text-white">
+                    Continue as Guest
+                  </p>
+                </button>
+              </Link>
+            </form>
 
-    //         <div className="hidden sm:flex flex-col items-center gap-1 lg:flex-row lg:gap-2 2xl:mt-8">
-    //           <p className="dark:text-white">You don’t have an account?</p>
-    //           <Link to="/signup" className="font-bold dark:text-white">
-    //             Create an account
-    //           </Link>
-    //         </div>
-    //       </div>
-    //     </AuthCard>
-    //   </div>
-    // </div>
+            <div className="hidden sm:flex flex-col items-center gap-1 lg:flex-row lg:gap-2 2xl:mt-8">
+              <p className="dark:text-white">You don’t have an account?</p>
+              <Link to="/signup" className="font-bold dark:text-white">
+                Create an account
+              </Link>
+            </div>
+          </div>
+        </AuthCard>
+      </div>
+    </div>
   );
 };
 
