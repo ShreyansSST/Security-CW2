@@ -127,7 +127,7 @@ const MainPage = () => {
       <>
         <Sidebar activeTab={activeTab} handleTabClick={handleTabClick} />
 
-        {/* <div className="flex flex-col justify-between text-black dark:text-white p-6 w-full md-2:ml-[280px] md-2:flex-1 md-2:relative md-2:px-6 md-2:py-0 lg:px-10">
+        <div className="flex flex-col justify-between text-black dark:text-white p-6 w-full md-2:ml-[280px] md-2:flex-1 md-2:relative md-2:px-6 md-2:py-0 lg:px-10">
           <div>
             <Header
               currentPage={header}
@@ -138,7 +138,7 @@ const MainPage = () => {
 
             {body}
           </div>
-        </div> */}
+        </div>
       </>
       )
       {isModalOpen && (
