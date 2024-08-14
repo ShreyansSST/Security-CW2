@@ -28,13 +28,13 @@ const BookDetails = ({ userInfo, fetchUserInfo, book, openModal }) => {
   return (
     <div className="mt-5 mb-16 flex flex-col gap-6 md:flex-row md:gap-8 md-2:mb-5">
       <div className="min-w-fit flex items-center justify-center gap-4 md:flex-col md:items-start md:justify-start">
-        {/* <div className="max-w-[150px] md:max-w-[180px]">
+        <div className="max-w-[150px] md:max-w-[180px]">
           <img
             src={`https://localhost:3001/uploads/${book.bookCover}`}
             alt=""
             className="rounded-lg h-[250px] object-fill"
           />
-        </div> */}
+        </div>
 
         <div className="flex flex-col gap-4">
           <div className="flex items-center gap-2">
