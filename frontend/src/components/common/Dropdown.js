@@ -72,25 +72,25 @@ const Dropdown = ({
       </div>
 
       {showOptions && (
-        // <div
-        //   className="dropdown-options w-full absolute z-10 right-0 mt-2 shadow-lg bg-white dark:bg-black max-h-40 overflow-y-scroll"
-        //   role="menu"
-        //   aria-orientation="vertical"
-        //   aria-labelledby="options-menu"
-        // >
-        //   <div className="w-full">
-        //     {dropdownList.map((option) => (
-        //       <button
-        //         key={option.title}
-        //         onClick={() => handleOptionSelect(option)}
-        //         className="w-full flex items-center p-4 bg-white dark:bg-black dark:text-white text-sm font-medium hover:bg-[#f5f2f2] dark:hover:bg-[#0e0e0e] focus:outline-none"
-        //         role="menuitem"
-        //       >
-        //         {option.title}
-        //       </button>
-        //     ))}
-        //   </div>
-        // </div>
+        <div
+          className="dropdown-options w-full absolute z-10 right-0 mt-2 shadow-lg bg-white dark:bg-black max-h-40 overflow-y-scroll"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="options-menu"
+        >
+          <div className="w-full">
+            {dropdownList.map((option) => (
+              <button
+                key={option.title}
+                onClick={() => handleOptionSelect(option)}
+                className="w-full flex items-center p-4 bg-white dark:bg-black dark:text-white text-sm font-medium hover:bg-[#f5f2f2] dark:hover:bg-[#0e0e0e] focus:outline-none"
+                role="menuitem"
+              >
+                {option.title}
+              </button>
+            ))}
+          </div>
+        </div>
       )}
     </div>
   );
