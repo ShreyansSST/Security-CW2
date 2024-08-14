@@ -43,18 +43,18 @@ const ExchangeRequestsBody = () => {
           pending book exchange requests.
         </p>
       ) : (
-        <div className="flex flex-col items-center gap-4">
-          <p className="font-medium text-center md-2:text-lg">
-            You are not <span className="text-purple-lighter">logged in.</span>
-          </p>
+        // <div className="flex flex-col items-center gap-4">
+        //   <p className="font-medium text-center md-2:text-lg">
+        //     You are not <span className="text-purple-lighter">logged in.</span>
+        //   </p>
 
-          <a
-            href="/signin"
-            className="text-white text-lg font-medium bg-purple-lighter hover:bg-purple-lighter-hover py-2 px-8 rounded-lg cursor-pointer transition duration-300"
-          >
-            Log In
-          </a>
-        </div>
+        //   <a
+        //     href="/signin"
+        //     className="text-white text-lg font-medium bg-purple-lighter hover:bg-purple-lighter-hover py-2 px-8 rounded-lg cursor-pointer transition duration-300"
+        //   >
+        //     Log In
+        //   </a>
+        // </div>
       )}
 
       <div className="flex flex-col gap-4">
