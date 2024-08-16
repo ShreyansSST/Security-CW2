@@ -45,21 +45,21 @@ exports.viewAllUsers = async (req, res) => {
 };
 
 // Delete user
-// exports.deleteUser = async (req, res) => {
-//   const userId = req.params.userId;
+exports.deleteUser = async (req, res) => {
+  const userId = req.params.userId;
 
-//   try {
-//     const user = await User.findById(userId);
-//     if (!user) {
-//       return res.status(404).json({ error: "User not found" });
-//     }
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
 
-//     User.findByIdAndDelete(req.params.userId)
-//     .then((reply) => res.status(204).end())
-//     .catch(next);
+    User.findByIdAndDelete(req.params.userId)
+    .then((reply) => res.status(204).end())
+    .catch(next);
 
-//     res.json({ message: "User deleted successfully" });
-//   } catch (error) {
-//     res.status(500).json({ error: "Internal Server Error" });
-//   }
-// };
+    res.json({ message: "User deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
