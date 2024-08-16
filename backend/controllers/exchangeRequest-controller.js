@@ -149,12 +149,12 @@ const declineExchangeRequest = async (req, res, next) => {
   try {
     const requestId = req.params.request_id;
 
-    // delete
-    const exchangeRequest = await ExchangeRequest.findByIdAndDelete(requestId);
+    // // delete
+    // const exchangeRequest = await ExchangeRequest.findByIdAndDelete(requestId);
 
-    if (!exchangeRequest) {
-      return res.status(404).json({ error: "Exchange request not found" });
-    }
+    // if (!exchangeRequest) {
+    //   return res.status(404).json({ error: "Exchange request not found" });
+    // }
 
     res.json({ message: "Exchange request declined" });
   } catch (error) {
