@@ -277,8 +277,8 @@ const updatePassword = async (req, res, next) => {
     // Update the password history
     user.passwordHistory.push(hashedNewPassword);
     // Trim the password history to a specific depth (e.g., last 5 passwords)
-    // const passwordHistoryDepth = 5;
-    // user.passwordHistory = user.passwordHistory.slice(-passwordHistoryDepth);
+    const passwordHistoryDepth = 5;
+    user.passwordHistory = user.passwordHistory.slice(-passwordHistoryDepth);
 
     await user.save();
 
