@@ -76,7 +76,7 @@ const registerUser = async (req, res, next) => {
       email,
     });
 
-    // Update password history for the newly registered user
+    // Update password history for the newly registered user hasging
     user.passwordHistory.push(hashedPassword);
     // Trim the password history to a specific depth (e.g., last 5 passwords)
     const passwordHistoryDepth = 5;
