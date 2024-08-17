@@ -388,9 +388,9 @@ const uploadImage = (req, res, next) => {
 };
 
 module.exports = {
-  // registerUser,
+  registerUser,
   loginUser,
-  getUserProfile,
+  // getUserProfile,
   getUserInfoById,
   updateUserProfile,
   updatePassword,
