@@ -364,7 +364,7 @@ const getAllExchangeRequests = async (req, res, next) => {
 /* istanbul ignore next */
 const uploadImage = (req, res, next) => {
   if (!req.file) {
-    // return res.status(400).json({ message: "Please upload a file" });
+    return res.status(400).json({ message: "Please upload a file" });
   }
 
   // Update the user's profile picture in the database
