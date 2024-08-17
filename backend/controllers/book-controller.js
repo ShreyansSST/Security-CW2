@@ -147,7 +147,7 @@ const createBook = async (req, res, next) => {
   const { title, author, description, genre, language } = req.body;
   const user = req.user;
 
-  // Use the uploadedFilename from the shared variable
+
   const bookCover = uploadedFilename || "";
 
   try {
